@@ -69,3 +69,44 @@ function RNG() {
 
     console.log(squadre_di_calcio);
     console.log(squadre_di_calcio_2)
+
+
+let articoli_di_moda = [
+    {
+        name: 'Poppy',
+        type: 'tshirt',
+        color: 'red',
+    },
+    {
+        name: 'Jumping',
+        type: 'occhiali',
+        color: 'blue',
+    },
+    {
+        name: 'CrissCross',
+        type: 'scarpe',
+        color: 'black',
+    },
+    {
+        name: 'Jenny',
+        type: 'borsa',
+        color: 'pink',
+    },
+
+]
+
+function RNG_Char() {
+    const char = 'abcdefghijklmnopqrstuvwxyz'
+    return char[Math.floor(Math.random() * char.length )]
+}
+
+let articoli_di_moda_2 = articoli_di_moda.map((oggetto) => {
+    return {
+        name: oggetto.name,
+        type: oggetto.type,
+        color: oggetto.color,
+        char: RNG_Char()
+    };
+});
+
+console.log(articoli_di_moda_2)
