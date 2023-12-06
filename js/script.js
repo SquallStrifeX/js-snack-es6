@@ -110,3 +110,11 @@ let articoli_di_moda_2 = articoli_di_moda.map((oggetto) => {
 });
 
 console.log(articoli_di_moda_2)
+
+let stampa = document.getElementById('stampa')
+
+articoli_di_moda_2.forEach((oggetto) => {
+    let p = document.createElement('p');
+    p.textContent = `Nome: ${oggetto.name}, Tipo: ${oggetto.type}, Colore: ${oggetto.color}, Lettera: ${oggetto.char}`;
+    stampa.appendChild(p);
+})
