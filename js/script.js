@@ -27,3 +27,45 @@ bici_da_corsa.forEach(({peso}) => {
 })
 
 console.log(pesominore)
+
+
+let squadre_di_calcio = [
+    {
+        nome: 'Besaid Aurochs',
+        punti_fatti: 0,
+        falli_subiti: 0
+
+    },
+    {
+        nome: 'Ronso Fang',
+        punti_fatti: 0,
+        falli_subiti: 0
+
+    },
+    {
+        nome: 'Luka Goers',
+        punti_fatti: 0,
+        falli_subiti: 0
+
+    },
+    {
+        nome: 'Kilika Beasts',
+        punti_fatti: 0,
+        falli_subiti: 0
+
+    },
+]
+
+function RNG() {
+    return Math.floor(Math.random() * 100) + 1;}
+
+    squadre_di_calcio.forEach((squadra) => {
+        squadra.punti_fatti = RNG();
+        squadra.falli_subiti = RNG();
+    });
+
+
+    const squadre_di_calcio_2 = squadre_di_calcio.map(({ nome, falli_subiti }) => ({ nome, falli_subiti }));
+
+    console.log(squadre_di_calcio);
+    console.log(squadre_di_calcio_2)
